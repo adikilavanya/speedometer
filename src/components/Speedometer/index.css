@@ -1,0 +1,39 @@
+/* Write your CSS here */
+.bg {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  color: white;
+  font-size: 30px;
+}
+.paragraph {
+  color: white;
+  font-size: 30px;
+}
+.para {
+  color: white;
+  font-size: 20px;
+}
+.img {
+  background-size: cover;
+  height: 20vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+.button {
+  color: white;
+  background-color: blue;
+  height: 3vh;
+  width: 30vw;
+  padding: 10px;
+}
