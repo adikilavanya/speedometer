@@ -1,26 +1,29 @@
 // Write your code here
-import {components} from 'react'
+import {Component} from 'react'
 import './index.css'
 
-class Speedometer extends components {
+class Speedometer extends Component {
   state = {count: 0}
+
   onIncrease = () => {
-    this.setState(priState => {
-      return {count: priState.count + 10}
-    })
+    const {count} = this.state
+    if (count < 200) {
+      this.setState(priState => {
+        return {count: priState.count + 10}
+      })
+    }
   }
 
+  //if state = {counter:200}
 
-
-//if state = {counter:200}
-
-
-  ondecrease = () => {
-    this.setState(priState => {
-      return {counter: priState.counter - 10}
-    })
+  onDecrease = () => {
+    const {count} = this.state
+    if (count < 0) {
+      this.setState(priState => {
+        return {counter: priState.counter - 10}
+      })
+    }
   }
-
 
   render() {
     const {count} = this.state
@@ -40,7 +43,7 @@ class Speedometer extends components {
           <button className="button" type="button" onClick={this.onIncrease}>
             Accelerate
           </button>
-          <button className="button" type="button" onClick={this.ondecrease}>
+          <button className="button" type="button" onClick={this.onDecrease}>
             Apply Break
           </button>
         </div>
